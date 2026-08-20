@@ -1,0 +1,166 @@
+@import "../abstracts/variables";
+
+.main-header {
+  background-color: $color-brown-5;
+
+  width: 100%;
+
+  // ==========================================
+  // KHỐI TOP (Chứa Logo, Icon, Search)
+  // ==========================================
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background-color: $color-brown-5;
+
+    /* --- MOBILE STYLES (Mặc định) --- */
+    // Nút Icon Mobile (Giỏ hàng trái, Menu phải)
+    .mobile-icon {
+      background: none;
+      border: none;
+      padding: 0;
+      color: $color-brown-2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    // Logo ở giữa trên mobile
+    .logo {
+      display: flex;
+      align-items: center;
+      img {
+        height: 28px;
+        width: auto;
+      }
+    }
+
+    // Ẩn thanh search và nhóm actions của desktop đi
+    .search-bar,
+    .actions {
+      display: none;
+    }
+    /* --- DESKTOP STYLES (Từ Tablet / Desktop trở lên) --- */
+    @media (min-width: 1024px) {
+      padding: 24px 40px;
+      // 1. Ẩn các icon của Mobile
+      .mobile-icon {
+        display: none;
+      }
+      // 2. Cố định Logo bên trái
+      .logo {
+        flex-shrink: 0;
+        margin-right: 40px;
+        img {
+          height: 36px;
+        }
+      }
+      // 3. Hiện và thiết kế thanh Search ở giữa
+      .search-bar {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        max-width: 600px;
+        border: 1px solid $color-brown-4;
+        padding: 12px 20px;
+        color: $color-brown-3;
+
+        svg {
+          color: $color-brown-2;
+          margin-right: 12px;
+        }
+
+        input {
+          border: none;
+          outline: none;
+          width: 100%;
+          background: transparent;
+          font-family: $font-body; // Gọi biến font
+          font-size: 14px;
+          &::placeholder {
+            color: $color-brown-2;
+          }
+        }
+      }
+
+      // 4. Hiện nhóm chức năng bên phải
+      .actions {
+        display: flex;
+        align-items: center;
+        margin-left: 40px;
+        gap: 24px; // Khoảng cách đều giữa các icon
+
+        .lang {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          font-size: 16px;
+          cursor: pointer;
+          color: $color-brown-2;
+        }
+
+        a {
+          color: $color-brown-2;
+          display: flex;
+          align-items: center;
+          transition: opacity 0.3s ease;
+
+          &:hover { opacity: 0.6; }
+        }
+
+        .btn-contact {
+          background-color: $color-brown-1; // Nâu đen
+          color: $color-brown-5;
+          padding: 12px 32px;
+          text-decoration: none;
+          font-size: 16px;
+          letter-spacing: 1px;
+          font-weight: 300;
+          text-transform: uppercase;
+
+          &:hover { opacity: 0.9; }
+        }
+      }
+    }
+  }
+
+  // ==========================================
+  // KHỐI BOTTOM (Menu Điều hướng Desktop)
+  // ==========================================
+  .header-bottom {
+    display: none; // Mặc định ẩn trên Mobile
+
+    @media (min-width: 1024px) {
+      display: block; // Hiện trên Desktop
+      padding: 20px 0;
+      background-color: $color-brown-6;
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        gap: 60px; // Khoảng cách giữa các menu
+
+        li {
+          a {
+            text-decoration: none;
+            color: #111;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: $color-brown-2; // Màu nhấn nhẹ khi hover
+            }
+          }
+        }
+      }
+    }
+  }
+}
