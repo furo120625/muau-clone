@@ -1,0 +1,60 @@
+.testimonials {
+  padding: 4rem 0;
+  background-color: $color-brown-5;
+  color: $color-brown-1;
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+  .grid {
+    article {
+      min-width: 0;
+      min-height: 256px;
+      padding: 1.5rem;
+      background-color: $color-brown-4;
+      > span {
+        display: block;
+        margin-bottom: 1.5rem;
+        font-family: $font-body;
+        font-size: clamp(0.6rem, 0.7vw, 0.75rem);
+        font-weight: 400;
+        line-height: 1.3;
+        color: $color-brown-2;
+        text-transform: uppercase;
+      }
+      > p {
+        margin: 0 0 1.5rem;
+        font-family: $font-body;
+        font-size: clamp(0.7rem, 0.8vw, 0.875rem);
+        font-weight: 400;
+        line-height: 1.45;
+        color: $color-brown-2;
+      }
+    }
+  }
+  .testimonial-author {
+    h3 {
+      margin: 0 0 0.25rem;
+      font-family: $font-heading;
+      font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: $color-brown-1;
+    }
+    small {
+      display: block;
+      font-family: $font-body;
+      font-size: clamp(0.6rem, 0.7vw, 0.75rem);
+      font-weight: 400;
+      line-height: 1.3;
+      color: $color-brown-3;
+    }
+  }
+  .grid {
+    @media (max-width: 1023px) {
+      row-gap: 1rem;
+      article {
+        padding: 1rem;
+      }
+    }
+  }
+}

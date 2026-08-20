@@ -1,0 +1,1078 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+img, picture, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hide-on-mobile {
+  display: none !important;
+}
+
+.hide-on-desktop {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .hide-on-mobile {
+    display: block !important;
+  }
+  .hide-on-desktop {
+    display: none !important;
+  }
+}
+body {
+  font-family: "Bricolage Grotesque", sans-serif;
+  color: #221208;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cormorant Garamond", serif;
+}
+
+p,
+span,
+a,
+button,
+input,
+textarea,
+select,
+label,
+li {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: lighter;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+.grid--3 {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 1024px) {
+  .grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+.grid--3-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+@media (min-width: 1024px) {
+  .grid--3-2 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+.grid--4 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+@media (min-width: 1024px) {
+  .grid--4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+
+.container {
+  width: 90%;
+  margin-inline: auto;
+}
+
+.masthead {
+  width: 100%;
+  background: #FEFDF9;
+  color: #221208;
+}
+.masthead > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+}
+.masthead > div > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #6F6459;
+  cursor: pointer;
+}
+.masthead > div > a {
+  display: flex;
+  align-items: center;
+}
+.masthead > div > a img {
+  width: auto;
+  height: 1.75rem;
+}
+.masthead > div > form {
+  display: none;
+}
+.masthead > div > div {
+  display: none;
+}
+.masthead > nav {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .masthead > div {
+    padding: 1.5rem 2.5rem;
+  }
+  .masthead > div > button {
+    display: none;
+  }
+  .masthead > div > a {
+    flex-shrink: 0;
+    margin-right: 2.5rem;
+  }
+  .masthead > div > a img {
+    height: 2.25rem;
+  }
+  .masthead > div > form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    max-width: 37.5rem;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid #F8F6EA;
+    color: #ACA6A1;
+  }
+  .masthead > div > form svg {
+    flex-shrink: 0;
+    margin-right: 0.75rem;
+    color: #6F6459;
+  }
+  .masthead > div > form input {
+    width: 100%;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 0.875rem;
+    color: #221208;
+  }
+  .masthead > div > form input::placeholder {
+    color: #6F6459;
+  }
+  .masthead > div > div {
+    display: flex;
+    align-items: center;
+    margin-left: 2.5rem;
+    gap: 1.5rem;
+  }
+  .masthead > div > div button,
+  .masthead > div > div a {
+    display: flex;
+    align-items: center;
+    border: 0;
+    background: none;
+    color: #6F6459;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.25s ease;
+  }
+  .masthead > div > div button:hover,
+  .masthead > div > div a:hover {
+    opacity: 0.6;
+  }
+  .masthead > div > div button {
+    gap: 0.25rem;
+    padding: 0;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 1rem;
+  }
+  .masthead > div > div a:last-child {
+    padding: 0.75rem 2rem;
+    background: #221208;
+    color: #FEFDF9;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.0625rem;
+  }
+  .masthead > div > div a:last-child:hover {
+    opacity: 0.9;
+  }
+  .masthead > nav {
+    display: block;
+    padding: 1.25rem 0;
+    background: #FFFFFF;
+  }
+  .masthead > nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .masthead > nav a {
+    color: #221208;
+    text-decoration: none;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.0625rem;
+    transition: color 0.25s ease;
+  }
+  .masthead > nav a:hover {
+    color: #6F6459;
+  }
+}
+
+body {
+  font-family: "Bricolage Grotesque", sans-serif;
+  color: #221208;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cormorant Garamond", serif;
+}
+
+p,
+span,
+a,
+button,
+input,
+textarea,
+select,
+label,
+li {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: lighter;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2.5rem 1.5rem;
+  background: url("../assets/images/herosection2.png") center/cover no-repeat;
+  color: #FFFFFF;
+  text-align: center;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 60%);
+}
+.hero h1,
+.hero p,
+.hero nav {
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  max-width: 700px;
+  margin: 0 0 1rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+}
+.hero p {
+  max-width: 600px;
+  margin: 0 0 2rem;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  font-weight: 300;
+  line-height: 1.5;
+}
+.hero nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.hero nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 1rem 1.5rem;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.0625rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.hero nav a:first-child {
+  background: #FFFFFF;
+  color: #221208;
+}
+.hero nav a:first-child:hover {
+  background: #F8F6EA;
+}
+.hero nav a:last-child {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+  color: #FFFFFF;
+}
+.hero nav a:last-child:hover {
+  background: #FFFFFF;
+  color: #221208;
+}
+@media (min-width: 1024px) {
+  .hero {
+    align-items: flex-start;
+    padding: 5rem 4rem;
+    background-image: url("../assets/images/herosection1.jpg");
+    text-align: left;
+  }
+  .hero h1 {
+    max-width: 700px;
+    margin-bottom: 1.5rem;
+    font-size: clamp(3rem, 5vw, 3.5rem);
+    text-transform: none;
+  }
+  .hero p {
+    margin-bottom: 2.5rem;
+  }
+  .hero nav {
+    width: auto;
+    flex-direction: row;
+  }
+  .hero nav a {
+    width: auto;
+    min-width: 15rem;
+  }
+}
+
+.values {
+  padding: 0.5rem;
+  background: #F8F6EA;
+  color: #221208;
+  text-transform: uppercase;
+}
+.values > ul {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  list-style: none;
+}
+.values > ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.values > ul > li picture {
+  display: flex;
+  flex-shrink: 0;
+}
+.values > ul > li img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+.values > ul > li span {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+@media (min-width: 1024px) {
+  .values > ul {
+    padding: 0.5rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .values > ul > li {
+    justify-content: flex-start;
+    padding: 0.5rem;
+  }
+  .values > ul > li img {
+    width: 28px;
+    height: 28px;
+    aspect-ratio: 4/3;
+  }
+  .values > ul > li span {
+    font-size: 1rem;
+  }
+}
+
+.features {
+  padding: 4rem 0;
+  background: #FEFDF9;
+}
+.features article {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.features article img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+.features article h3 {
+  margin: 1.5rem 0 1rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #221208;
+}
+.features article p {
+  margin: 0 0 1.5rem;
+  font-family: "Bricolage Grotesque", sans-serif;
+  line-height: 1.6;
+  color: #6F6459;
+  flex: 1;
+}
+.features article a {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: clamp(0.5rem, 3vw, 1rem);
+  font-weight: 500;
+  color: #221208;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+@media (min-width: 1024px) {
+  .features > .grid {
+    gap: 2.5rem;
+  }
+}
+
+.collections {
+  padding: 4rem 0;
+  background-color: #F8F6EA;
+}
+.collections .grid article {
+  min-width: 0;
+  background-color: #FEFDF9;
+  text-align: center;
+}
+.collections .grid article img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+.collections .grid article h3 {
+  margin: 1rem 0 0.5rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #221208;
+}
+.collections .grid article a {
+  display: inline-block;
+  padding-bottom: 1rem;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: #221208;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2rem;
+}
+
+.bestsellers {
+  padding: 4rem 0;
+  background-color: #FEFDF9;
+}
+.bestsellers .section-header {
+  margin-bottom: 2.5rem;
+}
+.bestsellers .grid article {
+  min-width: 0;
+}
+.bestsellers .grid article img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.bestsellers .grid article span {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: #6F6459;
+}
+.bestsellers .grid article h3 {
+  margin: 0 0 0.5rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #221208;
+}
+.bestsellers .grid article p {
+  margin: 0;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #6F6459;
+}
+.bestsellers .button {
+  min-height: 38px;
+  padding: 0 1.5rem;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  font-weight: lighter;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.bestsellers .btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.commitments {
+  padding: 4rem 0;
+  background-color: #F8F6EA;
+  color: #221208;
+}
+.commitments .section-header {
+  margin-bottom: 3rem;
+}
+.commitments .section-header::after {
+  content: "";
+  display: block;
+  width: 3.5rem;
+  height: 1px;
+  margin: 2rem auto 0;
+  background-color: #6F6459;
+}
+.commitments .grid article {
+  min-width: 0;
+  text-align: center;
+}
+.commitments .grid article img {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1rem;
+}
+.commitments .grid article h3 {
+  margin: 0 0 1rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1rem, 1.5vw, 3rem);
+  font-weight: 400;
+  line-height: 1.25;
+  color: #221208;
+}
+.commitments .grid article p {
+  max-width: 16rem;
+  margin: 0 auto;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: clamp(0.75rem, 1vw, 1.5rem);
+  font-weight: 100;
+  line-height: 1.5;
+  color: #6F6459;
+}
+
+.testimonials {
+  padding: 4rem 0;
+  background-color: #FEFDF9;
+  color: #221208;
+}
+.testimonials .section-header {
+  margin-bottom: 2.5rem;
+}
+.testimonials .grid article {
+  min-width: 0;
+  min-height: 256px;
+  padding: 1.5rem;
+  background-color: #F8F6EA;
+}
+.testimonials .grid article > span {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: clamp(0.6rem, 0.7vw, 0.75rem);
+  font-weight: 400;
+  line-height: 1.3;
+  color: #6F6459;
+  text-transform: uppercase;
+}
+.testimonials .grid article > p {
+  margin: 0 0 1.5rem;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: clamp(0.7rem, 0.8vw, 0.875rem);
+  font-weight: 400;
+  line-height: 1.45;
+  color: #6F6459;
+}
+.testimonials .testimonial-author h3 {
+  margin: 0 0 0.25rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #221208;
+}
+.testimonials .testimonial-author small {
+  display: block;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: clamp(0.6rem, 0.7vw, 0.75rem);
+  font-weight: 400;
+  line-height: 1.3;
+  color: #ACA6A1;
+}
+@media (max-width: 1023px) {
+  .testimonials .grid {
+    row-gap: 1rem;
+  }
+  .testimonials .grid article {
+    padding: 1rem;
+  }
+}
+
+.newsletter-signup {
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.25rem;
+  background: url("../assets/images/ringbackground.png") center/cover no-repeat;
+  color: #221208;
+}
+.newsletter-signup > div {
+  width: 100%;
+  max-width: 570px;
+  padding: 4rem 1.25rem;
+  background: #FEFDF9;
+  text-align: center;
+}
+.newsletter-signup p {
+  margin: 0;
+  font-family: "Bricolage Grotesque", sans-serif;
+  color: #ACA6A1;
+  font-size: clamp(0.75rem, 1vw, 0.875rem);
+  line-height: 1.5;
+}
+.newsletter-signup > div > p:first-child {
+  margin-bottom: 1.5rem;
+  color: #221208;
+  font-size: clamp(0.625rem, 0.8vw, 0.75rem);
+}
+.newsletter-signup h2 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.15;
+}
+.newsletter-signup h2 + p {
+  max-width: 460px;
+  margin: 1.5rem auto 2rem;
+}
+.newsletter-signup form {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.newsletter-signup form input,
+.newsletter-signup form button {
+  width: 100%;
+  height: 3rem;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 0.875rem;
+}
+.newsletter-signup form input {
+  padding: 0 1rem;
+  border: 1px solid rgba(111, 100, 89, 0.2);
+  border-radius: 0;
+  background: #FEFDF9;
+  color: #221208;
+  outline: none;
+}
+.newsletter-signup form input::placeholder {
+  color: #6F6459;
+}
+.newsletter-signup form input:focus {
+  border-color: #221208;
+}
+.newsletter-signup form button {
+  padding: 0 1.5rem;
+  border: 1px solid #221208;
+  border-radius: 0;
+  background: #221208;
+  color: #FEFDF9;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+.newsletter-signup form button:hover {
+  background: transparent;
+  color: #221208;
+}
+.newsletter-signup form + p {
+  max-width: 440px;
+  margin: 2rem auto 0;
+}
+@media (min-width: 768px) {
+  .newsletter-signup {
+    min-height: 550px;
+    padding: 4rem 2rem;
+  }
+  .newsletter-signup > div {
+    padding: 3.5rem 4rem;
+  }
+  .newsletter-signup form {
+    max-width: 250px;
+  }
+}
+@media (min-width: 1024px) {
+  .newsletter-signup > div {
+    padding: 3.25rem 4rem;
+  }
+}
+
+.contact-info {
+  padding: 4rem 0;
+  background: #FEFDF9;
+  color: #221208;
+}
+.contact-info > .container > div:first-child {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.contact-info > .container > div:first-child p {
+  margin: 0;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: clamp(0.7rem, 1vw, 0.8rem);
+  line-height: 1.5;
+  color: #ACA6A1;
+}
+.contact-info > .container > div:first-child p:last-child {
+  margin-top: 1rem;
+}
+.contact-info > .container > div:first-child h2 {
+  margin: 1rem 0 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: #221208;
+}
+.contact-info > .container > .grid {
+  margin-top: 3rem;
+  border: 1px solid rgba(111, 100, 89, 0.2);
+  gap: 0;
+}
+.contact-info > .container > .grid a {
+  min-height: 5.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(111, 100, 89, 0.2);
+}
+.contact-info > .container > .grid a span {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+  line-height: 1.3;
+  color: #221208;
+}
+.contact-info > .container > .grid a small {
+  margin-top: 0.5rem;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: #6F6459;
+}
+.contact-info > .container > .grid a:hover {
+  background: rgba(172, 166, 161, 0.08);
+}
+@media (min-width: 1024px) {
+  .contact-info > .container > .grid a {
+    border-right: 1px solid rgba(111, 100, 89, 0.2);
+    border-bottom: 0;
+  }
+  .contact-info > .container > .grid a:last-child {
+    border-right: 0;
+  }
+}
+
+.footer {
+  padding: 3rem 0 2rem;
+  background: #F8F6EA;
+  color: #221208;
+}
+.footer .grid--4 > div,
+.footer .grid--4 > nav {
+  min-width: 0;
+}
+.footer .grid--4 > div:first-child,
+.footer .grid--4 > div:last-child {
+  grid-column: 1/-1;
+}
+.footer h2,
+.footer h3 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  color: #221208;
+}
+.footer h2 {
+  font-size: clamp(2rem, 5vw, 2.25rem);
+  line-height: 1;
+}
+.footer h3 {
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+.footer p,
+.footer a {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+.footer p {
+  margin: 0;
+  color: #6F6459;
+}
+.footer a {
+  color: #6F6459;
+  text-decoration: none;
+}
+.footer a:hover {
+  opacity: 0.65;
+}
+.footer .grid--4 > div:first-child p {
+  max-width: 240px;
+  margin-top: 1rem;
+}
+.footer .grid--4 > div:first-child p + p {
+  margin-top: 0.25rem;
+}
+.footer .grid--4 > div:first-child > div {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.footer .grid--4 > div:first-child > div a {
+  display: flex;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.footer .grid--4 > div:first-child > div a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.footer .grid--4 nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.footer .grid--4 nav h3 {
+  margin-bottom: 0.7rem;
+}
+.footer .grid--4 > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.footer .grid--4 > div:last-child h3 {
+  margin-bottom: 0.7rem;
+}
+.footer .grid--4 > div:last-child p {
+  max-width: 280px;
+  margin-top: 0.1rem;
+}
+.footer .grid--3 {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(111, 100, 89, 0.2);
+  align-items: center;
+}
+.footer .grid--3 > p {
+  margin: 0;
+}
+.footer .grid--3 nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.footer .grid--3 nav a {
+  margin: 0;
+}
+.footer .grid--3 > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+.footer .grid--3 > div img {
+  display: block;
+  width: auto;
+  height: 1.5rem;
+  object-fit: contain;
+}
+@media (min-width: 1024px) {
+  .footer {
+    padding: 3.5rem 0 2rem;
+  }
+  .footer .grid--4 > div:first-child,
+  .footer .grid--4 > div:last-child {
+    grid-column: auto;
+  }
+  .footer .grid--3 > div {
+    justify-content: flex-end;
+  }
+}
+
+.section-header {
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+.section-header span {
+  display: block;
+  margin-bottom: 1rem;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #6F6459;
+}
+.section-header h2 {
+  margin: 0 0 1.25rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.25rem, 4vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-align: center;
+  color: #221208;
+}
+.section-header p {
+  max-width: 650px;
+  margin: 0 auto;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #6F6459;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 1.25rem;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.button--1 {
+  background-color: #221208;
+  color: #FFFFFF;
+}
+.button--1:hover {
+  background-color: #6F6459;
+  color: #FFFFFF;
+}
+
+.button--2 {
+  background-color: #FEFDF9;
+  color: #221208;
+}
+.button--2:hover {
+  background-color: #F8F6EA;
+  color: #221208;
+}
+
+.button--3 {
+  background-color: transparent;
+  color: #221208;
+  border-color: #221208;
+}
+.button--3:hover {
+  background-color: #221208;
+  color: #FFFFFF;
+}
+
+.button--4 {
+  background-color: #BB9668;
+  color: #FFFFFF;
+}
+.button--4:hover {
+  background-color: #6A5D4E;
+  color: #FFFFFF;
+}
+
+.button--5 {
+  min-height: auto;
+  padding: 0;
+  background-color: transparent;
+  color: #221208;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+.button--5:hover {
+  color: #6F6459;
+}
+
+/*# sourceMappingURL=style.css.map */

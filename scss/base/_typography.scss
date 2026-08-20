@@ -1,0 +1,23 @@
+@import "../abstracts/variables";
+
+body {
+  font-family: $font-body;
+  color: $color-brown-1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+}
+
+p,
+span,
+a,
+button,
+input,
+textarea,
+select,
+label,
+li {
+  font-family: $font-body;
+  font-weight: lighter;
+}

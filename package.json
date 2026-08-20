@@ -1,0 +1,36 @@
+{
+  "name": "figma-web-design",
+  "version": "1.0.0",
+  "description": "MUAU Clone Website",
+  "main": "index.js",
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/furo120625/muau-clone.git"
+  },
+  "keywords": [],
+  "author": "Phong",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/furo120625/muau-clone/issues"
+  },
+  "homepage": "https://github.com/furo120625/muau-clone#readme",
+  "devDependencies": {
+    "sass": "^1.102.0"
+  },
+  "dependencies": {
+    "chokidar": "^5.0.0",
+    "detect-libc": "^2.1.2",
+    "immutable": "^5.1.9",
+    "is-extglob": "^2.1.1",
+    "is-glob": "^4.0.3",
+    "node-addon-api": "^7.1.1",
+    "picomatch": "^4.0.5",
+    "readdirp": "^5.0.0",
+    "source-map-js": "^1.2.1"
+  },
+  "scripts": {
+    "sass": "sass --watch scss/style.scss css/style.css"
+  }
+}

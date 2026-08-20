@@ -1,0 +1,56 @@
+.values {
+  padding: 0.5rem;
+  background: $color-brown-4;
+  color: $color-brown-1;
+  text-transform: uppercase;
+  > ul {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    list-style: none;
+    > li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      picture {
+        display: flex;
+        flex-shrink: 0;
+      }
+      img {
+        display: block;
+        width: 24px;
+        height: 24px;
+        aspect-ratio: 1;
+        object-fit: contain;
+      }
+      span {
+        font-family: $font-body;
+        font-size: 0.9rem;
+        line-height: 1;
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    > ul {
+      padding: 0.5rem;
+      grid-template-columns: repeat(4, 1fr);
+      > li {
+        justify-content: flex-start;
+        padding: 0.5rem;
+        img {
+          width: 28px;
+          height: 28px;
+          aspect-ratio: 4 / 3;
+        }
+        span {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,170 @@
+.masthead {
+  width: 100%;
+  background: $color-brown-5;
+  color: $color-brown-1;
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    // =========================
+    // Mobile buttons
+    // =========================
+    > button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      border: 0;
+      background: none;
+      color: $color-brown-2;
+      cursor: pointer;
+    }
+    // =========================
+    // Logo
+    // =========================
+    > a {
+      display: flex;
+      align-items: center;
+      img {
+        width: auto;
+        height: 1.75rem;
+      }
+    }
+    // =========================
+    // Search
+    // =========================
+    > form {
+      display: none;
+    }
+    // =========================
+    // Desktop actions
+    // =========================
+    > div {
+      display: none;
+    }
+  }
+  // =========================
+  // Desktop navigation
+  // =========================
+  > nav {
+    display: none;
+  }
+  // =========================
+  // Desktop
+  // =========================
+  @media (min-width: 1024px) {
+    > div {
+      padding: 1.5rem 2.5rem;
+      // Hide mobile buttons
+      > button {
+        display: none;
+      }
+      // Logo
+      > a {
+        flex-shrink: 0;
+        margin-right: 2.5rem;
+        img {
+          height: 2.25rem;
+        }
+      }
+      // Search
+      > form {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        max-width: 37.5rem;
+        padding: 0.75rem 1.25rem;
+        border: 1px solid $color-brown-4;
+        color: $color-brown-3;
+        svg {
+          flex-shrink: 0;
+          margin-right: 0.75rem;
+          color: $color-brown-2;
+        }
+        input {
+          width: 100%;
+          padding: 0;
+          border: 0;
+          outline: 0;
+          background: transparent;
+          font-family: $font-body;
+          font-size: 0.875rem;
+          color: $color-brown-1;
+          &::placeholder {
+            color: $color-brown-2;
+          }
+        }
+      }
+      // Actions
+      > div {
+        display: flex;
+        align-items: center;
+        margin-left: 2.5rem;
+        gap: 1.5rem;
+        button,
+        a {
+          display: flex;
+          align-items: center;
+          border: 0;
+          background: none;
+          color: $color-brown-2;
+          text-decoration: none;
+          cursor: pointer;
+          transition: opacity 0.25s ease;
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+        // Language
+        button {
+          gap: 0.25rem;
+          padding: 0;
+          font-family: $font-body;
+          font-size: 1rem;
+        }
+        // Contact
+        a:last-child {
+          padding: 0.75rem 2rem;
+          background: $color-brown-1;
+          color: $color-brown-5;
+          font-family: $font-body;
+          font-size: 1rem;
+          letter-spacing: 0.0625rem;
+          &:hover {
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+    // =========================
+    // Navigation
+    // =========================
+    > nav {
+      display: block;
+      padding: 1.25rem 0;
+      background: $color-brown-6;
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3.75rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      a {
+        color: $color-brown-1;
+        text-decoration: none;
+        font-family: $font-body;
+        font-size: 0.875rem;
+        font-weight: 500;
+        letter-spacing: 0.0625rem;
+        transition: color 0.25s ease;
+        &:hover {
+          color: $color-brown-2;
+        }
+      }
+    }
+  }
+}
