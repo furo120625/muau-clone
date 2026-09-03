@@ -1,0 +1,450 @@
+// ========================================
+// SIDEBAR BASE
+// ========================================
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+
+  width: 100%;
+  height: 100dvh;
+
+  background: $color-brown-5;
+
+  display: flex;
+  flex-direction: column;
+
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+
+  // ======================================
+  // Header
+  // ======================================
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    padding: 20px 32px;
+  }
+
+
+  // ======================================
+  // Close
+  // ======================================
+
+  &__close {
+    width: 28px;
+    height: 28px;
+
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    display: grid;
+    place-items: center;
+
+    cursor: pointer;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+
+
+// ========================================
+// OVERLAY
+// ========================================
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+
+  background: rgba(34, 18, 8, 0.25);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+          opacity 0.3s ease,
+          visibility 0.3s ease;
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+body.sidebar-open {
+  overflow: hidden;
+}
+
+
+
+// ========================================
+// MOBILE SIDEBAR
+// ========================================
+
+.sidebar--mobile {
+
+  // --------------------------------------
+  // Navigation
+  // --------------------------------------
+
+  .sidebar__nav {
+    padding: 24px 38px 0;
+  }
+
+
+  // --------------------------------------
+  // Main menu
+  // --------------------------------------
+
+  .sidebar__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    li {
+      margin: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+
+    a {
+      display: block;
+
+      color: $color-brown-1;
+      text-decoration: none;
+
+      font-family: $font-body;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1;
+    }
+  }
+
+
+  // --------------------------------------
+  // Language / Wishlist / Login
+  // --------------------------------------
+
+  .sidebar__options {
+    margin-top: 34px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+
+
+    button,
+    a {
+      padding: 0;
+
+      border: 0;
+      background: transparent;
+
+      color: $color-brown-1;
+      text-decoration: none;
+
+      font-family: $font-body;
+      font-size: 14px;
+      font-weight: 400;
+
+      display: flex;
+      align-items: center;
+
+      cursor: pointer;
+    }
+
+
+    button {
+      gap: 8px;
+    }
+
+
+    a {
+      gap: 14px;
+    }
+
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+
+
+  // --------------------------------------
+  // Contact grid
+  // --------------------------------------
+
+  .sidebar__contact-grid {
+    margin: 40px 38px 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    border: 1px solid rgba(34, 18, 8, 0.1);
+
+
+    a {
+      min-height: 84px;
+
+      padding: 18px 0;
+
+      color: $color-brown-1;
+      text-decoration: none;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+
+      // Vertical divider
+      &:nth-child(odd) {
+        padding-left: 0;
+        padding-right: 18px;
+
+        border-right: 1px solid rgba(34, 18, 8, 0.1);
+      }
+
+
+      &:nth-child(even) {
+        padding-left: 18px;
+      }
+
+
+      // Horizontal divider
+      &:nth-child(n + 3) {
+        border-top: 1px solid rgba(34, 18, 8, 0.1);
+      }
+
+
+      span {
+        font-family: $font-heading;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.2;
+      }
+
+
+      small {
+        margin-top: 6px;
+
+        color: $color-brown-2;
+
+        font-family: $font-body;
+        font-size: 11px;
+        line-height: 1.2;
+      }
+    }
+  }
+}
+
+
+
+// ========================================
+// CONTACT SIDEBAR
+// ========================================
+
+.sidebar--contact {
+
+  width: min(100%, 480px);
+
+  padding: 48px 40px 40px;
+
+
+  // --------------------------------------
+  // Header
+  // --------------------------------------
+
+  .sidebar__header {
+    padding: 0 0 28px;
+
+    align-items: flex-start;
+
+    border-bottom: 1px solid rgba(34, 18, 8, 0.1);
+
+
+    > div {
+      flex: 1;
+    }
+
+
+    h2 {
+      margin: 0;
+
+      color: $color-brown-1;
+
+      font-family: $font-heading;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.1;
+    }
+
+
+    p {
+      margin: 14px 0 0;
+
+      color: $color-brown-3;
+
+      font-family: $font-body;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+  }
+
+
+  // --------------------------------------
+  // Contact information
+  // --------------------------------------
+
+  .contact-sidebar__items {
+
+    margin-top: 24px;
+
+    display: grid;
+
+    // Mobile first:
+    // 2 columns
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    border: 1px solid rgba(34, 18, 8, 0.1);
+
+
+    a {
+      font-size: 24px;
+      min-height: 110px;
+      padding: 24px 18px;
+      color: $color-brown-1;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+
+      &:nth-child(odd) {
+        border-right: 1px solid rgba(34, 18, 8, 0.1);
+      }
+
+
+      &:nth-child(n + 3) {
+        border-top: 1px solid rgba(34, 18, 8, 0.1);
+      }
+
+
+      span {
+        font-family: $font-heading;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.2;
+      }
+
+
+      small {
+        margin-top: 6px;
+
+        color: $color-brown-3;
+
+        font-family: $font-body;
+        font-size: 12px;
+        line-height: 1.2;
+      }
+    }
+  }
+
+
+  // --------------------------------------
+  // Logo
+  // --------------------------------------
+
+  .contact-sidebar__logo {
+    margin-top: auto;
+    padding-top: 40px;
+
+
+    img {
+      width: 100px;
+      height: auto;
+    }
+  }
+}
+
+
+
+// ========================================
+// DESKTOP
+// ========================================
+
+@media (min-width: 768px) {
+
+  // --------------------------------------
+  // Mobile sidebar disappears
+  // --------------------------------------
+
+  .sidebar--mobile {
+    display: none;
+  }
+
+
+  // --------------------------------------
+  // Contact sidebar
+  // --------------------------------------
+
+  .sidebar--contact {
+    display: flex;
+
+
+    .contact-sidebar__items {
+
+      // Desktop:
+      // 1 column / 4 rows
+
+      grid-template-columns: 1fr;
+
+
+      a {
+
+        min-height: 110px;
+
+        padding: 24px 0;
+
+
+        &:nth-child(odd) {
+          padding-right: 0;
+
+          border-right: 0;
+        }
+
+
+        &:nth-child(even) {
+          padding-left: 0;
+        }
+
+
+        &:nth-child(n + 2) {
+          border-top: 1px solid rgba(34, 18, 8, 0.1);
+        }
+      }
+    }
+  }
+}

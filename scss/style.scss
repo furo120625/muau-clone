@@ -2,7 +2,6 @@
 @import 'abstracts/mixins';
 @import 'base/reset';
 @import 'base/global';
-@import 'base/typography';
 @import 'layout/grid';
 @import 'layout/container';
 @import 'sections/header';
@@ -18,3 +17,5 @@
 @import 'sections/footer';
 @import 'components/section-header';
 @import 'components/button';
+@import 'components/sidebar';
+
