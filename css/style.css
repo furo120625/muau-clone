@@ -1161,14 +1161,14 @@ body.sidebar-open {
   flex-shrink: 0;
 }
 .sidebar--mobile .sidebar__contact-grid {
-  margin: 40px 38px 0;
+  margin: 40px 20px 20px 20px;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   border: 1px solid rgba(34, 18, 8, 0.1);
 }
 .sidebar--mobile .sidebar__contact-grid a {
   min-height: 84px;
-  padding: 18px 0;
+  padding: 18px;
   color: #221208;
   text-decoration: none;
   display: flex;
@@ -1176,7 +1176,6 @@ body.sidebar-open {
   justify-content: center;
 }
 .sidebar--mobile .sidebar__contact-grid a:nth-child(odd) {
-  padding-left: 0;
   padding-right: 18px;
   border-right: 1px solid rgba(34, 18, 8, 0.1);
 }
@@ -1228,6 +1227,7 @@ body.sidebar-open {
   line-height: 1.4;
 }
 .sidebar--contact .contact-sidebar__items {
+  padding-left: 20px;
   margin-top: 24px;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -1,10 +1,7 @@
 @import "../abstracts/variables";
-
 .main-header {
   background-color: $color-brown-5;
-
   width: 100%;
-
   // ==========================================
   // KHỐI TOP (Chứa Logo, Icon, Search)
   // ==========================================
@@ -14,7 +11,6 @@
     justify-content: space-between;
     padding: 16px 20px;
     background-color: $color-brown-5;
-
     /* --- MOBILE STYLES (Mặc định) --- */
     // Nút Icon Mobile (Giỏ hàng trái, Menu phải)
     .mobile-icon {
@@ -27,7 +23,6 @@
       justify-content: center;
       cursor: pointer;
     }
-
     // Logo ở giữa trên mobile
     .logo {
       display: flex;
@@ -37,7 +32,6 @@
         width: auto;
       }
     }
-
     // Ẩn thanh search và nhóm actions của desktop đi
     .search-bar,
     .actions {
@@ -67,12 +61,10 @@
         border: 1px solid $color-brown-4;
         padding: 12px 20px;
         color: $color-brown-3;
-
         svg {
           color: $color-brown-2;
           margin-right: 12px;
         }
-
         input {
           border: none;
           outline: none;
@@ -85,14 +77,12 @@
           }
         }
       }
-
       // 4. Hiện nhóm chức năng bên phải
       .actions {
         display: flex;
         align-items: center;
         margin-left: 40px;
         gap: 24px; // Khoảng cách đều giữa các icon
-
         .lang {
           display: flex;
           align-items: center;
@@ -101,16 +91,13 @@
           cursor: pointer;
           color: $color-brown-2;
         }
-
         a {
           color: $color-brown-2;
           display: flex;
           align-items: center;
           transition: opacity 0.3s ease;
-
           &:hover { opacity: 0.6; }
         }
-
         .btn-contact {
           background-color: $color-brown-1; // Nâu đen
           color: $color-brown-5;
@@ -120,19 +107,16 @@
           letter-spacing: 1px;
           font-weight: 300;
           text-transform: uppercase;
-
           &:hover { opacity: 0.9; }
         }
       }
     }
   }
-
   // ==========================================
   // KHỐI BOTTOM (Menu Điều hướng Desktop)
   // ==========================================
   .header-bottom {
     display: none; // Mặc định ẩn trên Mobile
-
     @media (min-width: 1024px) {
       display: block; // Hiện trên Desktop
       padding: 20px 0;
@@ -145,7 +129,6 @@
         margin: 0;
         padding: 0;
         gap: 60px; // Khoảng cách giữa các menu
-
         li {
           a {
             text-decoration: none;
@@ -154,7 +137,6 @@
             font-weight: 500;
             letter-spacing: 1px;
             transition: color 0.3s ease;
-
             &:hover {
               color: $color-brown-2; // Màu nhấn nhẹ khi hover
             }
