@@ -68,6 +68,7 @@ body.sidebar-open {
 // MOBILE SIDEBAR
 // ========================================
 .sidebar--mobile {
+  display: none;
   // --------------------------------------
   // Navigation
   // --------------------------------------
@@ -177,6 +178,7 @@ body.sidebar-open {
 // CONTACT SIDEBAR
 // ========================================
 .sidebar--contact {
+  display: flex;
   width: min(100%, 480px);
   padding: 48px 40px 40px;
   // --------------------------------------
@@ -262,34 +264,66 @@ body.sidebar-open {
   }
 }
 // ========================================
+// SIDEBAR VARIANTS
+// ========================================
+
+// Mobile sidebar is visible on mobile
+.sidebar--mobile {
+  display: flex;
+}
+
+// Contact sidebar is hidden on mobile
+.sidebar--contact {
+  display: none;
+}
+
+
+// ========================================
 // DESKTOP
 // ========================================
-@media (min-width: 768px) {
+
+@media (min-width: 1024px) {
+
   // --------------------------------------
   // Mobile sidebar disappears
   // --------------------------------------
+
   .sidebar--mobile {
     display: none;
   }
+
+
   // --------------------------------------
   // Contact sidebar
   // --------------------------------------
+
   .sidebar--contact {
     display: flex;
+
     .contact-sidebar__items {
+
       // Desktop:
       // 1 column / 4 rows
+
       grid-template-columns: 1fr;
+
       a {
+
         min-height: 110px;
         padding: 24px 0;
+
+
         &:nth-child(odd) {
           padding-right: 0;
           border-right: 0;
         }
+
+
         &:nth-child(even) {
           padding-left: 0;
         }
+
+
         &:nth-child(n + 2) {
           border-top: 1px solid rgba(34, 18, 8, 0.1);
         }

@@ -1108,6 +1108,9 @@ body.sidebar-open {
   overflow: hidden;
 }
 
+.sidebar--mobile {
+  display: none;
+}
 .sidebar--mobile .sidebar__nav {
   padding: 24px 38px 0;
 }
@@ -1200,6 +1203,7 @@ body.sidebar-open {
 }
 
 .sidebar--contact {
+  display: flex;
   width: min(100%, 480px);
   padding: 48px 40px 40px;
 }
@@ -1271,7 +1275,15 @@ body.sidebar-open {
   height: auto;
 }
 
-@media (min-width: 768px) {
+.sidebar--mobile {
+  display: flex;
+}
+
+.sidebar--contact {
+  display: none;
+}
+
+@media (min-width: 1024px) {
   .sidebar--mobile {
     display: none;
   }
