@@ -343,36 +343,26 @@ document.addEventListener("DOMContentLoaded", () => {
 const searchForm = document.querySelector('.search');
 const searchInput = searchForm.querySelector('input');
 const searchResults = searchForm.querySelector('.search-results');
-
 const links = [...document.querySelectorAll('a')];
-
 searchInput.addEventListener('input', () => {
     const searchValue = searchInput.value.trim().toLowerCase();
-
     searchResults.innerHTML = '';
-
     if (searchValue === '') {
         searchResults.classList.remove('is-visible');
         return;
     }
-
     const matches = links
         .filter(link => {
             const text = link.textContent.trim().toLowerCase();
-
             return text.includes(searchValue);
         })
         .slice(0, 3);
-
     matches.forEach(link => {
         const result = document.createElement('a');
-
         result.href = link.href;
         result.textContent = link.textContent.trim();
-
         searchResults.appendChild(result);
     });
-
     if (matches.length > 0) {
         searchResults.classList.add('is-visible');
     } else {
