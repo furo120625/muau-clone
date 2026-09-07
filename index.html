@@ -71,7 +71,7 @@
             <img src="assets/images/logo.png" alt="MUAU Schmuck">
         </a>
         <!-- Search -->
-        <form role="search">
+        <form class="search" role="search">
             <svg
                     width="20"
                     height="20"
@@ -83,11 +83,15 @@
                 <circle cx="11" cy="11" r="8"></circle>
                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
+
             <input
                     type="search"
                     placeholder="Suche nach Produkten, Kategorien, Materialien..."
                     aria-label="Produkte suchen"
+                    autocomplete="off"
             >
+
+            <div class="search-results"></div>
         </form>
         <!-- Desktop actions -->
         <div>

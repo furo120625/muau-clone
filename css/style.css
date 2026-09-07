@@ -215,6 +215,33 @@ img, picture, video, canvas, svg {
   }
 }
 
+.search {
+  position: relative;
+}
+.search .search-results {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 1px solid #ACA6A1;
+  z-index: 100;
+}
+.search .search-results.is-visible {
+  display: flex;
+}
+.search .search-results a {
+  padding: 0.75rem 1rem;
+  color: #221208;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+.search .search-results a:hover {
+  background: #F8F6EA;
+}
+
 body {
   font-family: "Bricolage Grotesque", sans-serif;
   color: #221208;
@@ -435,7 +462,7 @@ li {
 }
 .features article a {
   font-family: "Bricolage Grotesque", sans-serif;
-  font-size: clamp(0.5rem, 3vw, 1rem);
+  font-size: clamp(0.75rem, 3vw, 1rem);
   font-weight: 500;
   color: #221208;
   text-decoration: underline;
