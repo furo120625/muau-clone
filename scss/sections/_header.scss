@@ -7,9 +7,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 1.25rem;
-    // =========================
-    // Mobile buttons
-    // =========================
     > button {
       display: flex;
       align-items: center;
@@ -20,9 +17,6 @@
       color: $color-brown-2;
       cursor: pointer;
     }
-    // =========================
-    // Logo
-    // =========================
     > a {
       display: flex;
       align-items: center;
@@ -31,36 +25,22 @@
         height: 1.75rem;
       }
     }
-    // =========================
-    // Search
-    // =========================
     > form {
       display: none;
     }
-    // =========================
-    // Desktop actions
-    // =========================
     > div {
       display: none;
     }
   }
-  // =========================
-  // Desktop navigation
-  // =========================
   > nav {
     display: none;
   }
-  // =========================
-  // Desktop
-  // =========================
-  @media (min-width: 1024px){
+  @media (min-width: 1024px) {
     > div {
       padding: 1.5rem 2.5rem;
-      // Hide mobile buttons
       > button {
         display: none;
       }
-      // Logo
       > a {
         flex-shrink: 0;
         margin-right: 2.5rem;
@@ -68,8 +48,8 @@
           height: 2.25rem;
         }
       }
-      // Search
       > form {
+        position: relative;
         flex: 1;
         display: flex;
         align-items: center;
@@ -88,20 +68,22 @@
           border: 0;
           outline: 0;
           background: transparent;
-          font-family: $font-body;
-          font-size: 0.875rem;
           color: $color-brown-1;
+          font-family: $font-body;
+          font-size: 1rem;
+          font-weight: 300;
+          line-height: 1.5;
           &::placeholder {
             color: $color-brown-2;
+            opacity: 1;
           }
         }
       }
-      // Actions
       > div {
         display: flex;
         align-items: center;
-        margin-left: 2.5rem;
         gap: 1.5rem;
+        margin-left: 2.5rem;
         button,
         a {
           display: flex;
@@ -109,6 +91,10 @@
           border: 0;
           background: none;
           color: $color-brown-2;
+          font-family: $font-body;
+          font-size: 1rem;
+          font-weight: 300;
+          line-height: 1.5;
           text-decoration: none;
           cursor: pointer;
           transition: opacity 0.25s ease;
@@ -116,20 +102,14 @@
             opacity: 0.6;
           }
         }
-        // Language
         button {
           gap: 0.25rem;
           padding: 0;
-          font-family: $font-body;
-          font-size: 1rem;
         }
-        // Contact
         a:last-child {
           padding: 0.75rem 2rem;
           background: $color-brown-1;
           color: $color-brown-5;
-          font-family: $font-body;
-          font-size: 1rem;
           letter-spacing: 0.0625rem;
           &:hover {
             opacity: 0.9;
@@ -137,9 +117,6 @@
         }
       }
     }
-    // =========================
-    // Navigation
-    // =========================
     > nav {
       display: block;
       padding: 1.25rem 0;
@@ -155,11 +132,12 @@
       }
       a {
         color: $color-brown-1;
-        text-decoration: none;
         font-family: $font-body;
-        font-size: 0.875rem;
-        font-weight: 500;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
         letter-spacing: 0.0625rem;
+        text-decoration: none;
         transition: color 0.25s ease;
         &:hover {
           color: $color-brown-2;
@@ -186,6 +164,10 @@
     a {
       padding: 0.75rem 1rem;
       color: $color-brown-1;
+      font-family: $font-body;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
       text-decoration: none;
       transition: background 0.2s ease;
       &:hover {

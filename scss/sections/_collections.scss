@@ -15,8 +15,8 @@
       h3 {
         margin: 1rem 0 0.5rem;
         font-family: $font-heading;
-        font-size: clamp(0.9rem, 2vw, 1.1rem);
-        font-weight: 400;
+        font-size: 1.25rem;
+        font-weight: 700;
         line-height: 1.2;
         color: $color-brown-1;
       }
@@ -24,13 +24,23 @@
         display: inline-block;
         padding-bottom: 1rem;
         font-family: $font-body;
-        font-size: 0.75rem;
-        font-weight: 500;
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.5;
         letter-spacing: 0.03em;
         color: $color-brown-1;
         text-decoration: underline;
         text-decoration-thickness: 1px;
         text-underline-offset: 0.2rem;
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    .grid {
+      article {
+        h3 {
+          font-size: 1.5rem;
+        }
       }
     }
   }

@@ -1,6 +1,4 @@
-// ========================================
 // SIDEBAR BASE
-// ========================================
 .sidebar {
   position: fixed;
   top: 0;
@@ -43,9 +41,7 @@
     }
   }
 }
-// ========================================
 // OVERLAY
-// ========================================
 .sidebar-overlay {
   position: fixed;
   inset: 0;
@@ -64,9 +60,7 @@
 body.sidebar-open {
   overflow: hidden;
 }
-// ========================================
 // MOBILE SIDEBAR
-// ========================================
 .sidebar--mobile {
   display: none;
   // --------------------------------------
@@ -174,9 +168,7 @@ body.sidebar-open {
     }
   }
 }
-// ========================================
 // CONTACT SIDEBAR
-// ========================================
 .sidebar--contact {
   display: flex;
   width: min(100%, 480px);
@@ -260,9 +252,7 @@ body.sidebar-open {
     }
   }
 }
-// ========================================
 // SIDEBAR VARIANTS
-// ========================================
 // Mobile sidebar is visible on mobile
 .sidebar--mobile {
   display: flex;
@@ -271,9 +261,7 @@ body.sidebar-open {
 .sidebar--contact {
   display: none;
 }
-// ========================================
 // DESKTOP
-// ========================================
 @media (min-width: 1024px) {
   // --------------------------------------
   // Mobile sidebar disappears
