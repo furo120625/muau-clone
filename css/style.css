@@ -454,11 +454,8 @@ h5 {
   aspect-ratio: 1;
   object-fit: contain;
 }
-.values > ul > li span {
-  font-family: "Bricolage Grotesque", sans-serif;
-  font-size: 0.875rem;
-  font-weight: 300;
-  line-height: 1.5;
+.values > ul > li p {
+  font-size: 14px;
 }
 @media (min-width: 1024px) {
   .values > ul {

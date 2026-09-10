@@ -28,11 +28,8 @@
         aspect-ratio: 1;
         object-fit: contain;
       }
-      span {
-        font-family: $font-body;
-        font-size: 0.875rem;
-        font-weight: 300;
-        line-height: 1.5;
+      p{
+        font-size: 14px;
       }
     }
   }
