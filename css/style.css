@@ -456,6 +456,7 @@ h5 {
 }
 .values > ul > li p {
   font-size: 14px;
+  color: #221208;
 }
 @media (min-width: 1024px) {
   .values > ul {
