@@ -4,21 +4,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem 1.25rem;
+  padding: 4rem 24px;
   background: url("../assets/images/ringbackground.png")
   center / cover no-repeat;
   color: $color-brown-1;
   > div {
     width: 100%;
     max-width: 570px;
-    padding: 4rem 1.25rem;
+    padding: 4rem 24px;
     background: $color-brown-5;
     text-align: center;
   }
   p {
     margin: 0;
     font-family: $font-body;
-    font-size: 0.875rem;
+    font-size: 16px;
     line-height: 1.5;
     color: $color-brown-3;
   }
@@ -85,7 +85,7 @@
   form + p {
     max-width: 440px;
     margin: 2rem auto 0;
-    font-size: 0.875rem;
+    font-size: 16px;
     font-weight: 300;
   }
   @media (min-width: 768px) {
